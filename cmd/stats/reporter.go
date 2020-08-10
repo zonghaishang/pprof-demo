@@ -23,6 +23,7 @@ func IncCounter(name string, tags map[string]string, value int64) {
 
 func UpdateGauge(name string, tags map[string]string, value int64) {
 	name = addTagsToName(name, tags)
+	// case3 : todo 优化buf
 	//name = addTagsToNameFast(name, tags)
 	if *printStats {
 		fmt.Printf("UpdateGauge: %v = %v\n", name, value)
@@ -31,6 +32,7 @@ func UpdateGauge(name string, tags map[string]string, value int64) {
 
 func RecordTimer(name string, tags map[string]string, d time.Duration) {
 	name = addTagsToName(name, tags)
+	// case3 : todo 优化buf
 	//name = addTagsToNameFast(name, tags)
 	if *printStats {
 		fmt.Printf("RecordTimer: %v = %v\n", name, d)

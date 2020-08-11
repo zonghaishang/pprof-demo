@@ -11,7 +11,7 @@ import (
 	_ "net/http/pprof"
 )
 
-const hostPort = ":9090"
+const hostPort = ":9999"
 
 func main() {
 	flag.Parse()

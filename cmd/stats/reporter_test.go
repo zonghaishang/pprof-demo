@@ -10,9 +10,9 @@ func BenchmarkAddTagsToName(b *testing.B) {
 		"browser":  "Chrome",
 	}
 	for i := 0; i < b.N; i++ {
-		//addTagsToName("recv.calls", tags)
+		addTagsToName("recv.calls", tags)
 		// case 3: todo 优化buf
-		addTagsToNameFast("recv.calls", tags)
+		//addTagsToNameFast("recv.calls", tags)
 	}
 }
 
